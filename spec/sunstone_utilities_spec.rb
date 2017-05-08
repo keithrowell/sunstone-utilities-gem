@@ -5,7 +5,15 @@ RSpec.describe SunstoneUtilities do
     expect(SunstoneUtilities::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    # expect(false).to eq(true)
+  it 'has a git name' do
+    expect(SunstoneUtilities::git_name('This is My Project')).to eq 'this-is-my-project'
+    
+    expect(SunstoneUtilities.git_name('This is My Project with a very long name')).to eq 'this-is-my-project-with-a-very-long-name'
+  end
+  
+  it 'has a slack channel name' do
+    expect(SunstoneUtilities.slack_channel_name('My Project')).to eq 'my-project'
+    
+    expect(SunstoneUtilities.slack_channel_name('This is My Project with a very long name')).to eq 'this-is-my-project'
   end
 end

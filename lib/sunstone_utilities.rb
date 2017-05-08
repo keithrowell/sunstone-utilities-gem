@@ -1,3 +1,5 @@
+require 'string_extensions'
+
 module SunstoneUtilities
 
     def self.git_name name

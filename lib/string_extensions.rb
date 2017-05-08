@@ -1,3 +1,5 @@
+require 'active_support/all'
+
 class String
   def dehumanize
     self.underscore.parameterize.underscore 
