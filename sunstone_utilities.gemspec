@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'sunstone_utilities/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "sunstone"
+  spec.name          = "sunstone_utilities"
   spec.version       = SunstoneUtilities::VERSION
   spec.authors       = ["Keith Rowell"]
   spec.email         = ["keith@keithrowell.com"]
